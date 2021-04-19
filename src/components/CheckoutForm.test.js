@@ -23,4 +23,9 @@ test("form shows success message on submit with form details", async () => {
   userEvent.type(cityInput, "shelby");
   userEvent.type(stateInput, "NC");
   userEvent.type(zipInput, "32333");
+  expect(firstNameInput).toBeTruthy();
+  expect(firstNameInput).toBeInTheDocument();
+  expect(lastNameInput).toBeDefined();
+  expect(lastNameInput).not.toBeDisabled();
+  expect(addressInput).toBeTruthy();
 });
